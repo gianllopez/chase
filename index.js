@@ -1,13 +1,14 @@
 import React from 'react';
-import { AppRegistry, Text, View } from 'react-native';
+import { AppRegistry, View } from 'react-native';
 import { name } from './app.json';
-import { FontIcon } from './src/assets/icons';
 import { BurgerMenu } from './src/shared/components/BurgerMenu';
+import { NavBar } from './src/shared/components/NavBar';
 
 function App() {
   return (
-    <View style={{ padding: 15 }}>
-      <BurgerMenu/>      
+    <View style={{ flex: 1 }}>
+      <BurgerMenu/>
+      <NavBar/>
     </View>
   )
 };
