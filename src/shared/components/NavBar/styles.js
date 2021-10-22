@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import vars from '../../styles/variables';
+import { normalGray } from '../../styles/variables';
 
 export default StyleSheet.create({
   container: {
@@ -10,7 +10,7 @@ export default StyleSheet.create({
     justifyContent: 'space-around',
     width: '100%',
     height: 60,
-    backgroundColor: `${vars.commonGray}26`,
+    backgroundColor: `${normalGray}26`,
   },
-  link: {}
+  link: { padding: 15 }
 })

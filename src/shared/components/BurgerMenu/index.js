@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Animated, TouchableOpacity as Container } from 'react-native';
+import { Animated, TouchableOpacity } from 'react-native';
 import styles from './styles';
 
 const { Value, parallel, timing, multiply } = Animated;
@@ -22,17 +22,17 @@ export function BurgerMenu() {
       timing(sidesTranslate, {
         toValue: open ? 35/3 : 0,
         duration: 250,
-        useNativeDriver: false
+        useNativeDriver: true
       }),
       timing(sidesRotate, {
         toValue: open ? 45 : 0,
         duration: 250,
-        useNativeDriver: false
+        useNativeDriver: true
       }),
       timing(middleOpacity, {
         toValue: open ? 0 : 1,
         duration: 250,
-        useNativeDriver: false
+        useNativeDriver: true
       })
     ]).start()
   }, [open]);
@@ -48,7 +48,7 @@ export function BurgerMenu() {
   });
 
   return (
-    <Container style={styles.burgerMenu} onPress={toogleOpen} activeOpacity={1}>
+    <TouchableOpacity style={styles.burgerMenu} onPress={toogleOpen} activeOpacity={1}>
       <Animated.View
         style={[
           styles.line,
@@ -74,7 +74,7 @@ export function BurgerMenu() {
           ]}
         ]}
       />
-    </Container>
+    </TouchableOpacity>
   );
 
 }

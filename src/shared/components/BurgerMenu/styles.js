@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import vars from '../../styles/variables';
+import { normalGray } from '../../styles/variables';
 
 export default StyleSheet.create({
   burgerMenu: {
@@ -11,7 +11,7 @@ export default StyleSheet.create({
     height: 20/3,
     marginTop: 5,
     borderRadius: 5,
-    backgroundColor: vars.commonGray
+    backgroundColor: normalGray
   },
   middleLine: {
     width: 40*0.75  
