@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { AppRegistry, View } from 'react-native';
 import { name } from './app.json';
 import { NavigationContainer, useNavigationContainerRef } from '@react-navigation/native';
@@ -10,18 +10,8 @@ import { Home, Movements, Goals } from './src/screen';
 const Stack = createNativeStackNavigator();
 
 function App() {
-  
-  const [route, setRoute] = useState('home');
 
   const navRef = useNavigationContainerRef();
-
-  useEffect(() => {
-    navRef.addListener('state', () => {
-      let { name } = navRef.getCurrentRoute();
-      setRoute(name);
-    });
-    return () => navRef.removeListener('state');
-  }, []);
 
   return (
     <View style={{ flex: 1 }}>
@@ -40,7 +30,7 @@ function App() {
             options={{ animation: 'slide_from_right' }}
           />
         </Stack.Navigator>        
-        <NavBar currentRoute={route}/>
+        <NavBar navigationRef={navRef}/>
       </NavigationContainer>
     </View>
   )

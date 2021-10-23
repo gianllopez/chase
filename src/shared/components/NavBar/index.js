@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { View } from 'react-native';
 import { Link } from '@react-navigation/native';
 import { babyBlue, darkGray } from '../../styles/variables';
 import { FontIcon } from '../../../assets/icons';
 import styles from './styles';
 
-export function NavBar({ currentRoute }) {
+export function NavBar({ navigationRef }) {
+
+  const [currentRoute, setCurrentRoute] = useState('home');
+
+  useEffect(() => {
+    if (navigationRef.isReady()) {
+      navigationRef.addListener('state', () => {
+        let { name } = navigationRef.getCurrentRoute();
+        setCurrentRoute(name);
+      })
+    }
+  }, []);
 
   const getColor = route => (
     route === currentRoute ? babyBlue : darkGray
