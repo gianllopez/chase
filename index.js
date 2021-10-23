@@ -6,6 +6,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { BurgerMenu } from './src/shared/components/BurgerMenu';
 import { NavBar } from './src/shared/components/NavBar';
 import { Home, Movements, Goals } from './src/screen';
+import { AsideMenu } from './src/shared/components/AsideMenu';
 
 const Stack = createNativeStackNavigator();
 
@@ -14,8 +15,7 @@ function App() {
   const navRef = useNavigationContainerRef();
 
   return (
-    <View style={{ flex: 1 }}>
-      <BurgerMenu/>
+    <View style={{ flex: 1 }}>      
       <NavigationContainer ref={navRef}>
         <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="home">
           <Stack.Screen name="home" component={Home}/>
@@ -32,6 +32,7 @@ function App() {
         </Stack.Navigator>        
         <NavBar navigationRef={navRef}/>
       </NavigationContainer>
+      <AsideMenu/>
     </View>
   )
 

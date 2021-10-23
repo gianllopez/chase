@@ -3,6 +3,8 @@ import { normalGray } from '../../styles/variables';
 
 export default StyleSheet.create({
   burgerMenu: {
+    position: 'absolute',
+    elevation: 2,
     width: 40,
     height: (20/3 + 5) * 3,
     margin: 15    
