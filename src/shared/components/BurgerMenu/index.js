@@ -4,7 +4,7 @@ import styles from './styles';
 
 const { Value, parallel, timing, multiply } = Animated;
 
-export function BurgerMenu({ onPress }) {
+export function BurgerMenu({ menuState, onPress }) {
 
   const [open, setOpen] = useState(false);
 
@@ -18,6 +18,8 @@ export function BurgerMenu({ onPress }) {
     onPress();
     setOpen(!open);
   };
+
+  useEffect(() => setOpen(menuState), [menuState]);
 
   useEffect(() => {
     let { sidesTranslate, sidesRotate, middleOpacity } = animations;

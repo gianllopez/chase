@@ -1,8 +1,8 @@
 import { createIconSetFromIcoMoon } from 'react-native-vector-icons';
-import icomoonConfig from './config.json';
+import selectionConfig from './selection.json';
 
 export const FontIcon = createIconSetFromIcoMoon(
-  icomoonConfig,
+  selectionConfig,
   'ChaseIcons',
   'chase-icons.ttf'
 )
