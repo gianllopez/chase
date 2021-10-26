@@ -39,7 +39,7 @@ export function AsideMenu() {
     <Fragment>
       <Animated.View pointerEvents={show ? 'auto' : 'none'} style={[styles.asideMenu, { opacity: anims.opacity }]}>    
         <Animated.View style={[styles.links, { transform: [{ translateX: anims.translate }] }]}>
-          <MenuLink label="Reset all" icon="reset-all" color="red"/>
+          <MenuLink label="Reset all" icon="reset" color="red"/>
         </Animated.View>
         <TouchableOpacity style={styles.outside} onPress={() => setShow(false)}/>
       </Animated.View>
