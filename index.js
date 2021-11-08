@@ -5,7 +5,7 @@ import { NavigationContainer, useNavigationContainerRef } from '@react-navigatio
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { BurgerMenu } from './src/shared/components/BurgerMenu';
 import { NavBar } from './src/shared/components/NavBar';
-import { Home, Movements, Goals } from './src/screen';
+import { Home, Movements, Goals } from './src/screens';
 import { AsideMenu } from './src/shared/components/AsideMenu';
 
 const Stack = createNativeStackNavigator();

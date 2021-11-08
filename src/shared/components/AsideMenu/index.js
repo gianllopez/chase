@@ -2,6 +2,7 @@ import React, { Fragment, useEffect, useRef, useState } from 'react';
 import { Animated, View, Text, TouchableOpacity } from 'react-native';
 import { FontIcon } from '../../../assets/icons';
 import { BurgerMenu } from '../BurgerMenu';
+import MoneyVector from '../../../assets/vectors/money.svg';
 import styles from './styles';
 
 const MenuLink = ({ label, icon, action }) => (
@@ -33,13 +34,30 @@ export function AsideMenu() {
         useNativeDriver: true
       })
     ]).start();
-  }, [show]);
+  }, [show])
 
   return (
     <Fragment>
       <Animated.View pointerEvents={show ? 'auto' : 'none'} style={[styles.asideMenu, { opacity: anims.opacity }]}>    
-        <Animated.View style={[styles.links, { transform: [{ translateX: anims.translate }] }]}>
-          <MenuLink label="Reset all" icon="reset" color="red"/>
+        <Animated.View style={[styles.links, { transform: [{ translateX: anims.translate }] }]}>   
+          <View style={styles.header}>
+            <MoneyVector width={45} height={45}/>
+            <View style={styles.headerText}>
+              <Text style={styles.headerVerb}>
+                Chase it
+              </Text>
+              <Text style={styles.headerSlogan}>
+                Go and get that bag
+              </Text>
+            </View>
+          </View>
+          <MenuLink label="Reset all" icon="reset"/>
+          <MenuLink label="Share app" icon="share"/>
+          <MenuLink label="About" icon="info"/>
+          <MenuLink label="Donate" icon="dollar"/>
+          <Text style={styles.creds}>
+            by @gianlop3z
+          </Text>
         </Animated.View>
         <TouchableOpacity style={styles.outside} onPress={() => setShow(false)}/>
       </Animated.View>
