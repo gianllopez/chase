@@ -7,7 +7,7 @@ export default StyleSheet.create({
     elevation: 2,
     width: 40,
     height: (20/3 + 5) * 3,
-    margin: 15    
+    margin: 15
   },
   line: {
     height: 20/3,

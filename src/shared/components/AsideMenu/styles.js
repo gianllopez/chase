@@ -27,15 +27,16 @@ export default StyleSheet.create({
     borderLeftColor: darkGray,
     paddingLeft: 7,
     marginLeft: 7,
-    paddingVertical: 7
+    paddingVertical: 7,
   },
   headerVerb: {
     fontSize: 18,
-    fontWeight: 'bold'
+    fontFamily: 'TitilliumWeb-Bold',
   },
   headerSlogan: {
     color: darkGray,
-    fontSize: 14
+    fontSize: 14,
+    fontFamily: 'TitilliumWeb-Regular',
   },
   menuLink: {
     flexDirection: 'row',
@@ -43,14 +44,14 @@ export default StyleSheet.create({
     alignItems: 'center',
     width: '90%',
     backgroundColor: lightGray,
-    paddingVertical: 15,
+    paddingVertical: 12.5,
     borderTopRightRadius: 10,
     borderBottomRightRadius: 10,
-    marginBottom: 15
+    marginBottom: 15,
   },
   linkText: {
     marginRight: 10,
-    fontWeight: 'bold',
+    fontFamily: 'TitilliumWeb-Bold',
     color: darkGray,
     fontSize: 16
   },
@@ -60,7 +61,7 @@ export default StyleSheet.create({
     width: '100%',
     padding: 10,
     textAlign: 'center',
-    fontWeight: 'bold',
+    fontFamily: 'TitilliumWeb-Bold',
     color: darkGray
   },
   outside: {

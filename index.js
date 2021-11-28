@@ -1,12 +1,11 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { AppRegistry, View } from 'react-native';
-import { name } from './app.json';
 import { NavigationContainer, useNavigationContainerRef } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { BurgerMenu } from './src/shared/components/BurgerMenu';
-import { NavBar } from './src/shared/components/NavBar';
-import { Home, Movements, Goals } from './src/screens';
+import { Goals, Home, Movements } from './src/screens';
 import { AsideMenu } from './src/shared/components/AsideMenu';
+import { NavBar } from './src/shared/components/NavBar';
+import { name } from './app.json';
 
 const Stack = createNativeStackNavigator();
 
