@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { View } from 'react-native';
 import { Link } from '@react-navigation/native';
-import { babyBlue, darkGray } from '../../styles/variables';
+import { babyBlue, darkGray } from '../../../core/constants/colors';
 import { FontIcon } from '../../../assets/icons';
 import styles from './styles';
 

@@ -1,6 +1,4 @@
-import { Dimensions, StyleSheet } from 'react-native';
-
-let wHeight = Dimensions.get('window');
+import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
   currency: {

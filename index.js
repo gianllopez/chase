@@ -14,7 +14,7 @@ function App() {
   const navRef = useNavigationContainerRef();
 
   return (
-    <View style={{ flex: 1 }}>
+    <View style={{ flexGrow: 1 }}>
       <NavigationContainer ref={navRef}>
         <Stack.Navigator
           screenOptions={{ headerShown: false }}
@@ -38,6 +38,6 @@ function App() {
     </View>
   );
 
-}
+};
 
 AppRegistry.registerComponent(name, () => App);

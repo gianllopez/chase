@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { darkGray, lightGray } from '../../styles/variables';
+import { darkGray, lightGray } from '../../../core/constants/colors';
 
 export default StyleSheet.create({
   asideMenu: {

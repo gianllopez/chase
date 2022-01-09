@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { babyRed, lightGray } from '../../styles/variables';
+import { babyRed, lightGray } from '../../../core/constants/colors';
 
 export default StyleSheet.create({
   movementWrapper: {

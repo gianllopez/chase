@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { darkGray, lightGray } from '../../../../shared/styles/variables';
+import { darkGray, lightGray } from '../../../../core/constants/colors';
 
 export const styles = StyleSheet.create({
   totalStat: {

@@ -1,21 +1,21 @@
 import { StyleSheet } from 'react-native';
-import { normalGray } from '../../styles/variables';
+import { normalGray } from '../../../core/constants/colors';
 
 export default StyleSheet.create({
   burgerMenu: {
     position: 'absolute',
     elevation: 2,
     width: 40,
-    height: (20/3 + 5) * 3,
-    margin: 15
+    height: (20 / 3 + 5) * 3,
+    margin: 15,
   },
   line: {
-    height: 20/3,
+    height: 20 / 3,
     marginTop: 5,
     borderRadius: 5,
-    backgroundColor: normalGray
+    backgroundColor: normalGray,
   },
   middleLine: {
-    width: 40*0.75  
-  }
-})
+    width: 40 * 0.75,
+  },
+});
