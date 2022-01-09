@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, View } from 'react-native';
-import FeedingIcon from '../../../assets/vectors/movements/test.svg';
+import FeedingIcon from '../../../assets/icons/movements/test.svg';
 import styles from './styles';
 
 export function Movement() {

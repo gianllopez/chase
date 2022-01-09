@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { View } from 'react-native';
 import { Link } from '@react-navigation/native';
+import { FontIcon } from '../../../assets/fonts/icomoon';
 import { babyBlue, darkGray } from '../../../core/constants/colors';
-import { FontIcon } from '../../../assets/icons';
 import styles from './styles';
 
 export function NavBar({ navigationRef }) {
@@ -12,10 +12,10 @@ export function NavBar({ navigationRef }) {
   useEffect(() => {
     if (navigationRef.isReady()) {
       navigationRef.addListener('state', () => {
-        let { name } = navigationRef.getCurrentRoute();
+        const { name } = navigationRef.getCurrentRoute();
         setCurrentRoute(name);
-      })
-    }
+      });
+    };
   }, []);
 
   const getColor = route => (
@@ -46,6 +46,6 @@ export function NavBar({ navigationRef }) {
         />
       </Link>
     </View>
-  )
+  );
 
 }

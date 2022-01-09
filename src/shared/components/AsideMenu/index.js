@@ -1,8 +1,8 @@
 import React, { Fragment, useEffect, useRef, useState } from 'react';
 import { Animated, View, Text, TouchableOpacity } from 'react-native';
-import { FontIcon } from '../../../assets/icons';
+import { FontIcon } from '../../../assets/fonts/icomoon';
 import { BurgerMenu } from '../BurgerMenu';
-import MoneyVector from '../../../assets/vectors/money.svg';
+import MoneyVector from '../../../assets/icons/ui/money.svg';
 import styles from './styles';
 
 const MenuLink = ({ label, icon, action }) => (

@@ -1,11 +1,11 @@
-import { NavigationContainer, useNavigationContainerRef } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
 import { AppRegistry, View } from 'react-native';
-import { name } from './app.json';
+import { NavigationContainer, useNavigationContainerRef } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Goals, Home, Movements } from './src/screens';
 import { AsideMenu } from './src/shared/components/AsideMenu';
 import { NavBar } from './src/shared/components/NavBar';
+import { name } from './app.json';
 
 const Stack = createNativeStackNavigator();
 
