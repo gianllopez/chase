@@ -1,13 +1,12 @@
 import React, { useCallback } from 'react';
-import { View, Text, Alert, TouchableOpacity } from 'react-native';
-import IncomeIcon from '../../../../assets/vectors/income.svg';
+import { Alert, Text, TouchableOpacity, View } from 'react-native';
 import ExpendituresIcon from '../../../../assets/vectors/expenditures.svg';
+import IncomeIcon from '../../../../assets/vectors/income.svg';
 import { styles } from './styles';
 
 export function TotalStats({ isIncome, value }) {
-
-  let Icon = isIncome ? IncomeIcon : ExpendituresIcon,
-  totalWhat = isIncome ? 'Incomes' : 'Expenditures';
+  const Icon = isIncome ? IncomeIcon : ExpendituresIcon,
+    totalWhat = isIncome ? 'Incomes' : 'Expenditures';
 
   const pressHandler = useCallback(() => {
     Alert.alert(
@@ -29,5 +28,4 @@ export function TotalStats({ isIncome, value }) {
       </View>
     </TouchableOpacity>
   );
-
 }
