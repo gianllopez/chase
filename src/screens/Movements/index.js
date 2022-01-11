@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useCallback } from 'react';
 import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import { Movement } from '../../shared/components/Movement';
 import { Percentages } from './components/Percentages';
@@ -6,13 +6,18 @@ import { Spent } from './components/Spent';
 import { sharedStyles } from '../../shared/styles';
 import styles from './styles';
 
-export function Movements() {
+export function Movements({ navigation }) {
+
+  const goToNew = useCallback(() => {
+    navigation.navigate('new-movement');
+  }, []);
 
   return (
     <Fragment>
       <TouchableOpacity
         style={sharedStyles.newButton}
         activeOpacity={0.6}
+        onPress={goToNew}
       >
         <Text style={sharedStyles.newButtonLabel}>Movement</Text>
       </TouchableOpacity>

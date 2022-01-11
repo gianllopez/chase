@@ -6,6 +6,7 @@ import { Goals, Home, Movements } from './src/screens';
 import { AsideMenu } from './src/shared/components/AsideMenu';
 import { NavBar } from './src/shared/components/NavBar';
 import { name } from './app.json';
+import { NewMovement } from './src/screens/Movements/screens/NewMovement';
 
 const Stack = createNativeStackNavigator();
 
@@ -18,13 +19,18 @@ function App() {
       <NavigationContainer ref={navRef}>
         <Stack.Navigator
           screenOptions={{ headerShown: false }}
-          initialRouteName="home"
+          initialRouteName="new-movement"
         >
           <Stack.Screen name="home" component={Home} />
           <Stack.Screen
             name="movements"
             component={Movements}
             options={{ animation: 'slide_from_left' }}
+          />
+          <Stack.Screen
+            name="new-movement"
+            component={NewMovement}
+            options={{ animation: 'slide_from_right' }}
           />
           <Stack.Screen
             name="goals"
